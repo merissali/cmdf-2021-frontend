@@ -26,7 +26,13 @@ import {
   Button,
   Card,
   CardBody,
+  ControlledCollapse,
+  DropdownMenu,
+  DropdownItem,
+  DropdownToggle,
+  UncontrolledDropdown,
   CardImg,
+  Collapse,
   FormGroup,
   Input,
   InputGroupAddon,
@@ -45,17 +51,14 @@ import "../assets/vendor/font-awesome/css/font-awesome.min.css";
 import "../assets/css/argon-design-system-react.css";
 
 
+
 function Explore() {
-  const [habits, setHabits] = React.useState([]);
 
   useEffect(() => {
   });
-
-  // TODO
-//   const handleCheckOffHabit = e => {
-//     handleCheckOffHabit(e.target.value);
-//   }
   const main = useRef();
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const toggle = () => setDropdownOpen(prevState => !prevState);
 
     return (
       <>
@@ -89,22 +92,7 @@ function Explore() {
                   </Row>
                 </div>
               </Container>
-              {/* SVG separator */}
-              <div className="separator separator-bottom separator-skew">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  preserveAspectRatio="none"
-                  version="1.1"
-                  viewBox="0 0 2560 100"
-                  x="0"
-                  y="0"
-                >
-                  <polygon
-                    className="fill-white"
-                    points="2560 0 2560 100 0 100"
-                  />
-                </svg>
-              </div>
+              
             {/* </section> */}
             {/* 1st Hero Variation */}
           {/* </div> */}
@@ -133,8 +121,7 @@ function Explore() {
                           <Button
                             className="mt-4"
                             color="primary"
-                            href="#pablo"
-                            onClick={e => e.preventDefault()}
+                            href="#join"
                           >
                             JOIN
                           </Button>
@@ -161,7 +148,7 @@ function Explore() {
                           <Button
                             className="mt-4"
                             color="success"
-                            href="#pablo"
+                            href="#join"
                             onClick={e => e.preventDefault()}
                           >
                             JOIN
@@ -189,7 +176,7 @@ function Explore() {
                           <Button
                             className="mt-4"
                             color="warning"
-                            href="#pablo"
+                            href="#join"
                             onClick={e => e.preventDefault()}
                           >
                             JOIN
@@ -223,7 +210,7 @@ function Explore() {
                           <Button
                             className="mt-4"
                             color="primary"
-                            href="#pablo"
+                            href="#join"
                             onClick={e => e.preventDefault()}
                           >
                             JOIN
@@ -251,7 +238,7 @@ function Explore() {
                           <Button
                             className="mt-4"
                             color="success"
-                            href="#pablo"
+                            href="#join"
                             onClick={e => e.preventDefault()}
                           >
                             JOIN
@@ -279,7 +266,7 @@ function Explore() {
                           <Button
                             className="mt-4"
                             color="warning"
-                            href="#pablo"
+                            href="#join"
                             onClick={e => e.preventDefault()}
                           >
                             JOIN
