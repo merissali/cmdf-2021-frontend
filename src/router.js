@@ -11,6 +11,7 @@ import Home from "./pages/Home.js";
 import Login from "./pages/Login.js";
 import Profile from "./pages/Profile.js";
 import Explore from "./pages/Explore.js";
+import Dashboard from './pages/Dashboard'
 // import Register from "views/examples/Register.js";
 
 
@@ -26,28 +27,18 @@ class Router extends Component {
         return (
         <BrowserRouter>
         <Switch>
-          <Route exact path="/" render={() => <Home />}/>
+          <Route exact path="/" component={Home} />
           {/* <Route path="/login-page" exact render={props => <Login {...props} />} /> */}
           <Route
-            exact
-            path="/profile"
-            render={() => <Profile />}
-          />
+            exac path="/profile" component={Profile} />
           {/* <Route
             exact
             path="/dashboard"
             render={() => <Dashboard />}
           /> */}
-          <Route
-            exact
-            path="/explore"
-            render={() => <Explore />}
-          />
-          <Route
-            exact
-            path="/login"
-            render={() => <Login />}
-          />
+          <Route exact path="/explore" component={Explore} />
+          <Route exact path="/login" component={Login} />
+          <Route exact path='/dashboard' component={Dashboard} />
           {/* <Route
             path="/register-page"
             exact
