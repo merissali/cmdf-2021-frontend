@@ -18,47 +18,53 @@
 import React, { useState, useRef, useEffect } from "react";
 // nodejs library that concatenates classes
 import classnames from "classnames";
-import tempIcon from "../assets/img/ill/ill-2.svg";
 import { Progress } from "reactstrap";
 
 // reactstrap components
 import {
-  Badge,
-  Button,
-  Card,
-  CardBody,
-  CardImg,
-  FormGroup,
-  Input,
-  InputGroupAddon,
-  InputGroupText,
-  InputGroup,
   Container,
   Row,
   Col
 } from "reactstrap";
 
 // core components
-import DemoNavbar from "../components/Navbars/NavBar.js";
-import CardsFooter from "../components/Footers/CardsFooter.js";
+import NavBar from "../components/Navbars/NavBar.js";
 import "../assets/vendor/nucleo/css/nucleo.css";
 import "../assets/vendor/font-awesome/css/font-awesome.min.css";
 import "../assets/css/argon-design-system-react.css";
-
+import checkBox from "../"
 
 // index page sections
 
-function Landing() {
+function Home(props) {
+  const { habits } = props;
   // const [habits, setHabits] = React.useState([]);
 
-  useEffect(() => {
-    // document.documentElement.scrollTop = 0;
-    // document.scrollingElement.scrollTop = 0;
-    // this.refs.main.scrollTop = 0;
-    // setHabits([]);
-  });
 
-  // TODO
+  // function createHabit(habit) {
+  //   return (
+  //     // <button><i class="fa fa-square-o" aria-hidden="true"></i> onClick={this.checkHabit(habit.id)}</button>
+  //   );
+  // }
+
+  function createProgressBar(userHabit) {
+    return (
+      <Row>
+        <Col lg="12">
+        <div className="progress-wrapper">
+        <div className="progress-info">
+        <span className="display-5 text-primary">{userHabit.name}</span>
+          <div className="progress-percentage">
+            <span>35%</span>
+          </div>
+        </div>
+        <Progress max="100" value="35"/>
+      </div>
+        </Col>
+      </Row>
+    );
+  }
+
   // const handleCheckHabit = e => {
   //   handleCheckHabit(e.target.value);
   // }
@@ -66,7 +72,7 @@ function Landing() {
 
     return (
       <>
-        <DemoNavbar />
+        <NavBar />
         <main ref={main}>
           <div className="position-relative">
             {/* shape Hero */}
@@ -91,43 +97,16 @@ function Landing() {
                         <span>Here are your habits for today.</span>
                       </h1>
                       <ul class="fa-ul">
+                         {/* {habits.map((habit) => createHabit(habit))} */}
                        <li><span class="fa-li"></span><i class="far fa-square"></i>
-                            <span className="display-4 text-white"> Physical Activity</span></li>
+                            <span className="display-6 text-white"> Physical Activity</span></li>
                         <li><span class="fa-li"></span><i class="far fa-square"></i>
-                            <span className="display-4 text-white"> Sleep early</span></li>
+                            <span className="display-6 text-white"> Sleep early</span></li>
                         <li><span class="fa-li"></span><i class="far fa-square"></i>
-                            <span className="display-4 text-white"> Study</span></li>
+                            <span className="display-6 text-white"> Study</span></li>
                         <li><span class="fa-li"></span><i class="far fa-square"></i>
-                            <span className="display-4 text-white"> Drink Water</span></li>
+                            <span className="display-6 text-white"> Drink Water</span></li>
                       </ul>
-                        {/* <Row>
-                          <Col lg="6">
-                          <i className="far fa-square" />
-                          </Col>
-                      </Row>
-                      <Row>
-                          <Col lg="6">
-                          <i className="far fa-square" />
-                          </Col>
-                      </Row>
-                      <Row>
-                          <Col lg="6">
-                          <i className="far fa-square" />
-                          </Col>
-                      </Row> */}
-                      <div className="btn-wrapper">
-                        
-                        {/* <Button
-                          className="btn-icon btn-2"
-                          color="primary"
-                          type="button"
-                        >
-                          <span className="btn-inner--icon mr-1">
-                            <i className="far fa-square" />
-                          </span>
-                        </Button> */}
-                        
-                      </div>
                     </Col>
                   </Row>
                   
@@ -166,26 +145,47 @@ function Landing() {
                     </Col>
                   </Row>
 
-                  <Row>
-                    <Col lg="6">
+                  {/* <Row>
+                    <Col lg="12">
+                    <div className="progress-wrapper">
+                    <div className="progress-info">
                     <span className="display-5 text-primary">Physical Activity</span>
-                    <Progress value="35"></Progress>
+                      <div className="progress-percentage">
+                        <span>35%</span>
+                      </div>
+                    </div>
+                    <Progress max="100" value="35"/>
+                  </div>
                     </Col>
                   </Row>
 
                   <Row>
-                    <Col lg="6">
+                    <Col lg="12">
+                    <div className="progress-wrapper">
+                    <div className="progress-info">
                     <span className="display-5 text-primary">Sleep</span>
-                    <Progress value="80"></Progress>
+                      <div className="progress-percentage">
+                        <span>77%</span>
+                      </div>
+                    </div>
+                    <Progress max="100" value="77"/>
+                  </div>
                     </Col>
                   </Row>
 
                   <Row>
-                    <Col lg="6">
+                  <Col lg="12">
+                    <div className="progress-wrapper">
+                    <div className="progress-info">
                     <span className="display-5 text-primary">Productivity</span>
-                    <Progress value="55"></Progress>
+                      <div className="progress-percentage">
+                        <span>60%</span>
+                      </div>
+                    </div>
+                    <Progress max="100" value="60"/>
+                  </div>
                     </Col>
-                  </Row>
+                  </Row> */}
 
 
             </Container>
@@ -194,4 +194,4 @@ function Landing() {
       </>
     );
   }
-export default Landing;
+export default Home;
