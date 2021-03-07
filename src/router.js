@@ -12,7 +12,7 @@ import Login from "./pages/Login.js";
 import Profile from "./pages/Profile.js";
 import Explore from "./pages/Explore.js";
 import CurrentHabits from "./pages/CurrentHabits.js";
-import Habit from "./pages/Habit.js";
+import Dashboard from './pages/Dashboard';
 
 
 class Router extends Component {
@@ -27,34 +27,13 @@ class Router extends Component {
         return (
         <BrowserRouter>
         <Switch>
-          <Route exact path="/" render={() => <Home />}/>
-          {/* <Route path="/login-page" exact render={props => <Login {...props} />} /> */}
+          <Route exact path="/" component={Home} />
           <Route
-            exact
-            path="/profile"
-            render={() => <Profile />}
-          />
-          {/* <Route
-            exact
-            path="/dashboard"
-            render={() => <Dashboard />}
-          /> */}
-          <Route
-            exact
-            path="/explore"
-            render={() => <Explore />}
-          />
-          <Route
-            exact
-            path="/login"
-            render={() => <Login />}
-          />
-          <Route
-            path="/current-habits"
-            exact
-            render={() => <CurrentHabits />}
-          />
-          {/* <Redirect to="/" /> */}
+            exact path="/profile" component={Profile} />
+          <Route exact path="/explore" component={Explore} />
+          <Route exact path="/login" component={Login} />
+          <Route exact path='/dashboard' component={Dashboard} />
+          <Route exact path="/current-habits" component={CurrentHabits} />
         </Switch>
         </BrowserRouter>
        
