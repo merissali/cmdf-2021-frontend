@@ -473,6 +473,19 @@ h6,
   line-height: 1.5;
 }
 
+.display-5 {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.display-6 {
+  padding-left: 0.8em;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
 hr {
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -16410,7 +16423,7 @@ button.bg-lighter:focus {
 }
 
 .bg-gradient-warning {
-  background: linear-gradient(35deg, #fb6340 0, #fbb140 100%) !important;
+  background: linear-gradient(35deg, #fdc3d5 0, #fbb140 100%) !important;
 }
 
 .bg-gradient-danger {

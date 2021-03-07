@@ -22,6 +22,8 @@ import Headroom from "headroom.js";
 import "../../assets/vendor/nucleo/css/nucleo.css";
 import "../../assets/vendor/font-awesome/css/font-awesome.min.css";
 import "../../assets/css/argon-design-system-react.css";
+import calendarIcon from "../../assets/img/icons/common/calendar.png";
+
 // reactstrap components
 import {
   Button,
@@ -78,7 +80,7 @@ class DemoNavbar extends React.Component {
             <Container>
               <NavbarBrand className="mr-lg-5" to="/" tag={Link}>
                       <img
-                          src={require('../../assets/img/icons/common/github.svg')}
+                          src={calendarIcon}
                         />
               </NavbarBrand>
               <button className="navbar-toggler" id="navbar_global">
@@ -109,59 +111,91 @@ class DemoNavbar extends React.Component {
                   </Row>
                 </div>
                 <Nav className="navbar-nav-hover align-items-lg-center" navbar>
-                <UncontrolledDropdown nav>
+                {/* <UncontrolledDropdown nav>
                     <DropdownToggle nav>
                       <i className="ni ni-collection d-lg-none mr-1" />
                       <span className="nav-link-inner--text">Profile</span>
                     </DropdownToggle>
                     <DropdownMenu>
+                    <DropdownItem to="/profile" tag={Link}>
+                        My Profile
+                      </DropdownItem>
                       <DropdownItem to="/dashboard" tag={Link}>
                         Dashboard
-                      </DropdownItem>
-                      <DropdownItem to="/my-habits" tag={Link}>
-                        My Habits
                       </DropdownItem>
                       <DropdownItem to="/statistics" tag={Link}>
                         Statistics
                       </DropdownItem>
                     </DropdownMenu>
+                  </UncontrolledDropdown> */}
+
+
+                <UncontrolledDropdown nav>
+                    <DropdownToggle nav>
+                      <i className="ni ni-ui-04 d-lg-none mr-1" />
+                      <span className="nav-link-inner--text">Profile</span>
+                    </DropdownToggle>
+                    <DropdownMenu className="dropdown-menu-xl">
+                      <div className="dropdown-menu-inner">
+                        <Media
+                          className="d-flex align-items-center"
+                          to="/profile" tag={Link}
+                        >
+                          <div className="icon icon-shape bg-gradient-primary rounded-circle text-white">
+                            <i className="fa fa-user-circle" />
+                          </div>
+                          <Media body className="ml-3">
+                            <h6 className="heading text-primary mb-md-1">
+                              My Profile
+                            </h6>
+                            <p className="description d-none d-md-inline-block mb-0">
+                              View your profile and all of your habits.
+                            </p>
+                          </Media>
+                        </Media>
+                        <Media
+                          className="d-flex align-items-center"
+                          to="/dashboard" tag={Link}
+                        >
+                          <div className="icon icon-shape bg-gradient-success rounded-circle text-white">
+                            <i className="fa fa-bar-chart" />
+                          </div>
+                          <Media body className="ml-3">
+                            <h6 className="heading text-primary mb-md-1">
+                              Dashboard
+                            </h6>
+                            <p className="description d-none d-md-inline-block mb-0">
+                              See how you have been doing this past week.
+                            </p>
+                          </Media>
+                        </Media>
+                        <Media
+                          className="d-flex align-items-center"
+                          to="/current-habits" tag={Link}
+                        >
+                          <div className="icon icon-shape bg-gradient-warning rounded-circle text-white">
+                            <i className="fa fa-tasks" />
+                          </div>
+                          <Media body className="ml-3">
+                            <h5 className="heading text-warning mb-md-1">
+                              Current habits
+                            </h5>
+                            <p className="description d-none d-md-inline-block mb-0">
+                              Check out your progress on current habits.
+                            </p>
+                          </Media>
+                        </Media>
+                      </div>
+                    </DropdownMenu>
                   </UncontrolledDropdown>
                   
-                  <NavItem className="d-none d-lg-block ml-lg-4">
-                    <Button
-                      className="btn-neutral btn-icon"
-                      color="default"
-                      href="https://www.creative-tim.com/product/argon-design-system-react?ref=adsr-navbar"
-                      target="_blank"
-                    >
-                      {/* <i className="ni ni-ui-04 d-lg-none mr-1" /> */}
-                      <span className="nav-link-inner--text ml-1">
-                        Explore
-                      </span>
-                    </Button>
-                  </NavItem>
-
-
-                  {/* <UncontrolledDropdown nav>
-                    <DropdownToggle nav>
-                      <i className="ni ni-collection d-lg-none mr-1" />
+                  <UncontrolledDropdown nav>
+                    <DropdownToggle nav to="/explore" tag={Link}>
+                      <i className="ni ni-ui-04 d-lg-none mr-1" />
                       <span className="nav-link-inner--text">Explore</span>
                     </DropdownToggle>
-                    <DropdownMenu>
-                      <DropdownItem to="/landing-page" tag={Link}>
-                        Landing
-                      </DropdownItem>
-                      <DropdownItem to="/profile-page" tag={Link}>
-                        Profile
-                      </DropdownItem>
-                      <DropdownItem to="/login-page" tag={Link}>
-                        Login
-                      </DropdownItem>
-                      <DropdownItem to="/register-page" tag={Link}>
-                        Register
-                      </DropdownItem>
-                    </DropdownMenu>
-                  </UncontrolledDropdown> */}
+                    </UncontrolledDropdown>
+
                 </Nav>
                 <Nav className="align-items-lg-center ml-lg-auto" navbar>
                   <NavItem>

@@ -7,31 +7,12 @@ import "./assets/vendor/font-awesome/css/font-awesome.min.css";
 import "./assets/css/argon-design-system-react.css";
 
 // import Index from "./views/Index.js";
-import Landing from "./pages/Landing.js";
-// import Login from "views/examples/Login.js";
+import Home from "./pages/Home.js";
+import Login from "./pages/Login.js";
 import Profile from "./pages/Profile.js";
+import Explore from "./pages/Explore.js";
 // import Register from "views/examples/Register.js";
 
-// ReactDOM.render(
-//   <BrowserRouter>
-//     <Switch>
-//       <Route path='/' exact render={props => <Landing {...props} />}/>
-//       {/* <Route path="/login-page" exact render={props => <Login {...props} />} /> */}
-//       <Route
-//         path='/profile'
-//         exact
-//         render={props => <Profile {...props} />}
-//       />
-//       {/* <Route
-//         path="/register-page"
-//         exact
-//         render={props => <Register {...props} />}
-//       />
-//       <Redirect to="/" /> */}
-//     </Switch>
-//   </BrowserRouter>,
-//   document.getElementById("root")
-// );
 
 class Router extends Component {
     constructor () {
@@ -45,12 +26,27 @@ class Router extends Component {
         return (
         <BrowserRouter>
         <Switch>
-          <Route exact path="/" render={() => <Landing />}/>
+          <Route exact path="/" render={() => <Home />}/>
           {/* <Route path="/login-page" exact render={props => <Login {...props} />} /> */}
           <Route
-            path="/profile"
             exact
+            path="/profile"
             render={() => <Profile />}
+          />
+          {/* <Route
+            exact
+            path="/dashboard"
+            render={() => <Dashboard />}
+          /> */}
+          <Route
+            exact
+            path="/explore"
+            render={() => <Explore />}
+          />
+          <Route
+            exact
+            path="/login"
+            render={() => <Login />}
           />
           {/* <Route
             path="/register-page"
