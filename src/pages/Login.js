@@ -16,6 +16,7 @@
 
 */
 import React, {useRef, useEffect } from "react";
+import { Link } from "react-router-dom";
 import GoogleIcon from "../assets/img/icons/common/google.svg";
 
 // reactstrap components
@@ -127,6 +128,7 @@ function Login() {
                             className="my-4"
                             color="primary"
                             type="button"
+                            to="/" tag={Link}
                           >
                             Sign in
                           </Button>
