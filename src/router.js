@@ -11,7 +11,8 @@ import Home from "./pages/Home.js";
 import Login from "./pages/Login.js";
 import Profile from "./pages/Profile.js";
 import Explore from "./pages/Explore.js";
-// import Register from "views/examples/Register.js";
+import CurrentHabits from "./pages/CurrentHabits.js";
+import Habit from "./pages/Habit.js";
 
 
 class Router extends Component {
@@ -48,12 +49,12 @@ class Router extends Component {
             path="/login"
             render={() => <Login />}
           />
-          {/* <Route
-            path="/register-page"
+          <Route
+            path="/current-habits"
             exact
-            render={props => <Register {...props} />}
+            render={() => <CurrentHabits />}
           />
-          <Redirect to="/" /> */}
+          {/* <Redirect to="/" /> */}
         </Switch>
         </BrowserRouter>
        

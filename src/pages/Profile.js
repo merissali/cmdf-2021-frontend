@@ -19,7 +19,7 @@ import React, { useEffect, useRef } from "react";
 import profilePhoto from "../assets/img/theme/team-4-800x800.jpg";
 
 // reactstrap components
-import { Button, Card, Container, Row, Col } from "reactstrap";
+import { Button, Badge, Card, Container, Row, Col } from "reactstrap";
 
 // core components
 import NavBar from "../components/Navbars/NavBar.js";
@@ -47,19 +47,6 @@ const main = useRef();
             </div>
             {/* SVG separator */}
             <div className="separator separator-bottom separator-skew">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                preserveAspectRatio="none"
-                version="1.1"
-                viewBox="0 0 2560 100"
-                x="0"
-                y="0"
-              >
-                <polygon
-                  className="fill-white"
-                  points="2560 0 2560 100 0 100"
-                />
-              </svg>
             </div>
           </section>
           <section className="section">
@@ -83,13 +70,30 @@ const main = useRef();
                       lg="4"
                     >
                       <div className="card-profile-actions py-4 mt-lg-0">
-                        
+                        {/* <Button
+                          className="mr-4"
+                          color="info"
+                          href="#pablo"
+                          onClick={e => e.preventDefault()}
+                          size="sm"
+                        >
+                          Connect
+                        </Button>
+                        <Button
+                          className="float-right"
+                          color="default"
+                          href="#pablo"
+                          onClick={e => e.preventDefault()}
+                          size="sm"
+                        >
+                          Message
+                        </Button> */}
                       </div>
                     </Col>
                     <Col className="order-lg-1" lg="4">
                       <div className="card-profile-stats d-flex justify-content-center">
                         <div>
-                          <span className="heading">10</span>
+                          <span className="heading">8</span>
                           <span className="description">Habits</span>
                         </div>
                         <div>
@@ -106,23 +110,41 @@ const main = useRef();
                   <div className="text-center mt-5">
                     <h3>
                       Jessica Jones{""}
-                      <span className="font-weight-light">, 27</span>
+                      <span className="font-weight-light">, 24</span>
                     </h3>
-                    <div className="h6 font-weight-300">
+                    <div className="h6 font-weight-800">
                       <i className="ni location_pin mr-2" />
-                      Bucharest, Romania
+                      Vancouver, BC
+                    </div>
+                 
+                    <div className="h6 mt-3">
+                      <i className="ni business_briefcase-24 mr-2" />
+                      Living my life one day at a time!
                     </div>
                   </div>
-                  <div className="mt-5 py-5 border-top text-center">
-                    
+                  <div className="mt-3 py-5 border-top text-center">
+                    <Row className="justify-content-center">
+                        <Col>
+                      <Badge color="primary" px-2>Physical Activity </Badge>
+                      </Col>
+                      <Col>
+                      <Badge color="success" px-2>Mental Wellness </Badge>  
+                      </Col> 
+                      <Col>
+                      <Badge color="warning" px-2>Productivity </Badge>  
+                      </Col>   
+                      <Col>
+                      <Badge color="info" px-2> {""} Hobbies{""} </Badge>  
+                      </Col>              
+                    </Row>
                   </div>
                 </div>
               </Card>
             </Container>
           </section>
-          <section className="section pb-0 bg-gradient-warning">
+          {/* <section className="section pb-0 bg-gradient-warning">
 
-          </section>
+          </section> */}
         </main>
       </>
     );

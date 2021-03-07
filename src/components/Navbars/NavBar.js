@@ -23,6 +23,8 @@ import "../../assets/vendor/nucleo/css/nucleo.css";
 import "../../assets/vendor/font-awesome/css/font-awesome.min.css";
 import "../../assets/css/argon-design-system-react.css";
 import calendarIcon from "../../assets/img/icons/common/calendar.png";
+import kaizenLogo from "../../assets/img/brand/kaizen.png";
+
 
 // reactstrap components
 import {
@@ -80,7 +82,7 @@ class DemoNavbar extends React.Component {
             <Container>
               <NavbarBrand className="mr-lg-5" to="/" tag={Link}>
                       <img
-                          src={calendarIcon}
+                          src={kaizenLogo}
                         />
               </NavbarBrand>
               <button className="navbar-toggler" id="navbar_global">
@@ -111,23 +113,6 @@ class DemoNavbar extends React.Component {
                   </Row>
                 </div>
                 <Nav className="navbar-nav-hover align-items-lg-center" navbar>
-                {/* <UncontrolledDropdown nav>
-                    <DropdownToggle nav>
-                      <i className="ni ni-collection d-lg-none mr-1" />
-                      <span className="nav-link-inner--text">Profile</span>
-                    </DropdownToggle>
-                    <DropdownMenu>
-                    <DropdownItem to="/profile" tag={Link}>
-                        My Profile
-                      </DropdownItem>
-                      <DropdownItem to="/dashboard" tag={Link}>
-                        Dashboard
-                      </DropdownItem>
-                      <DropdownItem to="/statistics" tag={Link}>
-                        Statistics
-                      </DropdownItem>
-                    </DropdownMenu>
-                  </UncontrolledDropdown> */}
 
 
                 <UncontrolledDropdown nav>
