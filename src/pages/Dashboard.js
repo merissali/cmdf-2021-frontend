@@ -40,7 +40,7 @@ const Dashboard = props => {
                     </div>
                 </section>
                 <VerticalBar />
-                <div class='row'>
+                <div class='row' style={{ justifyContent: 'space-around' }}>
                     <div class='col-xl-4'>
                         <div class='card-header'>
                             <h5 class='h3 mb-0'>Today's Habits</h5>

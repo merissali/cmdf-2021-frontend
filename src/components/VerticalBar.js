@@ -5,6 +5,7 @@ const data = {
   labels: ['March 1', 'March 2', 'March 3', 'March 4', 'March 5', 'March 6', 'March 7'],
   datasets: [
     {
+        label: 'Completed Habits',
       data: [6, 10, 12, 4, 7, 9, 10],
       backgroundColor: [
         'rgba(255, 99, 132, 0.2)',
@@ -34,12 +35,9 @@ const options = {
       {
         ticks: {
           beginAtZero: true,
-        },
+        }
       },
     ],
-  },
-  legend: {
-      display: false
   }
 }
 
