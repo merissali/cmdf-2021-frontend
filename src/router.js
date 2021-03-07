@@ -38,7 +38,7 @@ class Router extends Component {
           /> */}
           <Route exact path="/explore" component={Explore} />
           <Route exact path="/login" component={Login} />
-          <Route exact path='/profile-dashboard' component={Dashboard} />
+          <Route exact path='/dashboard' component={Dashboard} />
           {/* <Route
             path="/register-page"
             exact
