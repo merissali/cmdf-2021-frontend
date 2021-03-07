@@ -7,10 +7,12 @@
     "url": "git+https://github.com/merissali/cmdf-2021-frontend.git"
   },
   "dependencies": {
+    "@reactchartjs/react-chart.js": "^1.0.0-rc.3",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "bootstrap": "4.3.1",
+    "chart.js": "^2.9.4",
     "classnames": "2.2.6",
     "headroom.js": "0.11.0",
     "moment": "2.24.0",
