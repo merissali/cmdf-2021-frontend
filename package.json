@@ -2,6 +2,9 @@
   "name": "cmdf-2021-frontend",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "14.x"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/merissali/cmdf-2021-frontend.git"
