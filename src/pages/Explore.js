@@ -19,6 +19,7 @@ import React, { useState, useRef, useEffect } from "react";
 // nodejs library that concatenates classes
 import classnames from "classnames";
 import { Progress } from "reactstrap";
+import { Link } from "react-router-dom";
 
 // reactstrap components
 import {
@@ -122,6 +123,7 @@ function Explore() {
                             className="mt-4"
                             color="primary"
                             href="#join"
+                            to="/create-habit" tag={Link}
                           >
                             JOIN
                           </Button>
@@ -149,7 +151,7 @@ function Explore() {
                             className="mt-4"
                             color="success"
                             href="#join"
-                            onClick={e => e.preventDefault()}
+                            to="/create-habit" tag={Link}
                           >
                             JOIN
                           </Button>
@@ -177,7 +179,7 @@ function Explore() {
                             className="mt-4"
                             color="warning"
                             href="#join"
-                            onClick={e => e.preventDefault()}
+                            to="/create-habit" tag={Link}
                           >
                             JOIN
                           </Button>
@@ -211,7 +213,7 @@ function Explore() {
                             className="mt-4"
                             color="primary"
                             href="#join"
-                            onClick={e => e.preventDefault()}
+                            to="/create-habit" tag={Link}
                           >
                             JOIN
                           </Button>
@@ -239,7 +241,7 @@ function Explore() {
                             className="mt-4"
                             color="success"
                             href="#join"
-                            onClick={e => e.preventDefault()}
+                            to="/create-habit" tag={Link}
                           >
                             JOIN
                           </Button>
@@ -267,7 +269,7 @@ function Explore() {
                             className="mt-4"
                             color="warning"
                             href="#join"
-                            onClick={e => e.preventDefault()}
+                            to="/create-habit" tag={Link}
                           >
                             JOIN
                           </Button>

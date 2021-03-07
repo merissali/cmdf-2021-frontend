@@ -13,6 +13,8 @@ import Profile from "./pages/Profile.js";
 import Explore from "./pages/Explore.js";
 import CurrentHabits from "./pages/CurrentHabits.js";
 import Dashboard from './pages/Dashboard';
+import CreateHabit from "./pages/CreateHabit.js";
+
 
 
 class Router extends Component {
@@ -34,6 +36,7 @@ class Router extends Component {
           <Route exact path="/login" component={Login} />
           <Route exact path='/dashboard' component={Dashboard} />
           <Route exact path="/current-habits" component={CurrentHabits} />
+          <Route exact path="/create-habit" component={CreateHabit} />
         </Switch>
         </BrowserRouter>
        
