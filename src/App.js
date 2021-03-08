@@ -9,12 +9,12 @@ import * as Sentry from '@sentry/react'
 import { Integrations } from '@sentry/tracing'
 import { CaptureConsole } from '@sentry/integrations'
 
-Sentry.init({
-  dsn: "https://ecc488e3fa2240538ba885c408bea4dc@o544277.ingest.sentry.io/5665390",
-  integrations: [new Integrations.BrowserTracing(), new CaptureConsole({ levels: ['error'] })],
-  tracesSampleRate: 1.0,
-  ignoreErrors: ['TypeError: Cancelled']
-});
+// Sentry.init({
+//   dsn: "https://ecc488e3fa2240538ba885c408bea4dc@o544277.ingest.sentry.io/5665390",
+//   integrations: [new Integrations.BrowserTracing(), new CaptureConsole({ levels: ['error'] })],
+//   tracesSampleRate: 1.0,
+//   ignoreErrors: ['TypeError: Cancelled']
+// });
 
 
 function App() {
